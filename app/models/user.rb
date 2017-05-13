@@ -13,8 +13,12 @@ class User < ActiveRecord::Base
 
 
     def valid_email
-		if (self.email =~ /\w+@\w+\.\w{2,}/).nil?
-			self.errors.add(:email, "invalid email")
-		end
-	end
+		  if (self.email =~ /\w+@\w+\.\w{2,}/).nil?
+			  self.errors.add(:email, "invalid email")
+		  end
+	  end
+
+  #   def authenticate
+  #   password_digest == password
+  # end
 end
